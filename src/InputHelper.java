@@ -19,7 +19,7 @@ public class InputHelper {
                 x = in.nextInt();
                 done = true;
             } else {
-                System.out.println("!!ERROR HOLY SHIT!!");
+                System.out.println("Error: Not an integer");
             }
             in.nextLine(); //clear buffer
         } while (!done);
