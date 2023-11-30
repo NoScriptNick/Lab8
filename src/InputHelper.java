@@ -98,14 +98,14 @@ public class InputHelper {
         return x;
     }
 
-    public static double getRangedDouble(Scanner in, String prompt, int min, int max) {
+    public static double getRangedDouble(Scanner in, String prompt, double min, double max) {
         boolean done = false;
-        int x = 0;
+        double x = 0;
 
         System.out.println(prompt);
         do {
-            if (in.hasNextInt()) {
-                x = in.nextInt();
+            if (in.hasNextDouble()) {
+                x = in.nextDouble();
                 //checks for value in range
                 if (x <= max && x >= min) {
                     done = true;
@@ -113,7 +113,7 @@ public class InputHelper {
                     System.out.println("Error: Out of range");
                 }
             } else {
-                System.out.println("Error: Not an integer");
+                System.out.println("Error: Not a double");
             }
             in.nextLine(); //clear buffer
         } while (!done);
